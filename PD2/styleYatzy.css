@@ -1,0 +1,143 @@
+/* === YATZY PROJECT PAGE STYLES === */
+
+/* Hero Section (Top Banner) */
+.hero {
+  background: linear-gradient(135deg, #00b6c4 0%, #007b8c 100%);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero.small-hero {
+  padding: 80px 20px;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Main Documentation Section */
+.project-detail {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.project-detail h2 {
+  font-size: 1.6rem;
+  color: #00b6c4;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  border-left: 6px solid #00b6c4;
+  padding-left: 10px;
+}
+
+.project-detail p {
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.project-detail ul {
+  margin-left: 25px;
+  margin-bottom: 20px;
+  list-style-type: square;
+  color: #333;
+}
+
+.project-detail ul li {
+  line-height: 1.8;
+}
+
+/* Project Screenshot */
+.project-image {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 12px;
+  display: block;
+  margin: 30px auto;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+  transform: scale(1.03);
+}
+
+/* Code Snippet Styling */
+.code-snippet {
+  background: #1e1e1e;
+  color: #e0e0e0;
+  border-radius: 10px;
+  padding: 15px 20px;
+  overflow-x: auto;
+  margin: 20px 0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+}
+
+.code-snippet pre {
+  margin: 0;
+}
+
+.code-snippet code {
+  color: #9cdcfe;
+}
+
+/* GitHub Button */
+.button {
+  display: inline-block;
+  background: #00b6c4;
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.button:hover {
+  background: #0099a8;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background: #f5f5f5;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 60px;
+  color: #555;
+  font-size: 0.9rem;
+  border-top: 1px solid #ddd;
+}
+
+/* === RESPONSIVE ADJUSTMENTS === */
+@media (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .project-detail {
+    margin: 40px auto;
+  }
+
+  .project-detail h2 {
+    font-size: 1.3rem;
+  }
+
+  .code-snippet {
+    font-size: 0.85rem;
+  }
+}

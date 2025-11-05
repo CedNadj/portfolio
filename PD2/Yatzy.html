@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yatzy Game | My Portfolio</title>
+  <link rel="stylesheet" href="styleYatzy.css">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="container nav-container">
+      <h1 class="logo">My Portfolio</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="yatzy.html" class="active">Yatzy Game</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero small-hero">
+    <div class="hero-content">
+      <h2>Yatzy Game Project</h2>
+      <p>Interactive Dice Game built with HTML, CSS, and JavaScript</p>
+    </div>
+  </section>
+
+  <!-- Main Project Section -->
+  <main class="container project-detail">
+
+    <h2>Project Overview</h2>
+    <p>
+      The <strong>Yatzy Game</strong> was developed as part of Assignments #1 and #2 in my Intro to Internet and Web Development course.
+      It replicates the popular dice game <em>Yatzy</em>, allowing players to roll dice, hold combinations, and calculate scores dynamically.
+      The goal was to combine logic programming, UI feedback, and responsive design into a cohesive experience.
+    </p>
+
+    <img src="" alt="Screenshot of Yatzy Game Interface" class="project-image">
+
+    <h2>Technical Documentation</h2>
+    <ul>
+      <li><strong>Frontend Technologies:</strong> HTML5, CSS3, JavaScript (ES6)</li>
+      <li><strong>Dynamic UI:</strong> JavaScript DOM manipulation for dice rolls and score updates</li>
+      <li><strong>Game Logic:</strong> Random number generation with conditional scoring categories</li>
+      <li><strong>Data Handling:</strong> Arrays and objects to store game state efficiently</li>
+      <li><strong>Responsive Design:</strong> CSS Flexbox and media queries for cross-device compatibility</li>
+    </ul>
+
+    <h2>Technical Highlights</h2>
+    <p>
+      The Yatzy logic utilizes <code>Math.random()</code> to simulate dice rolls, dynamically updates dice visuals,
+      and maintains user scores using object-based state management. Event listeners capture user interactions for
+      rolling, holding, and resetting dice.
+    </p>
+
+    <div class="code-snippet">
+      <pre><code>
+// Example JavaScript: Random Dice Roll
+const rollDice = () => Math.floor(Math.random() * 6) + 1;
+
+document.querySelector("#roll").addEventListener("click", () => {
+  const results = Array.from({length: 5}, rollDice);
+  console.log("Rolled:", results);
+});
+      </code></pre>
+    </div>
+
+    <h2>Technologies & Skills Demonstrated</h2>
+    <ul>
+      <li>Responsive web design principles (flexbox, grid, and media queries)</li>
+      <li>Separation of concerns (HTML for structure, CSS for styling, JS for interactivity)</li>
+      <li>Use of semantic elements for accessibility and SEO</li>
+      <li>Integration of Git/GitHub for version control</li>
+      <li>Adherence to HTML & CSS best practices (validated and commented code)</li>
+    </ul>
+
+    <h2>View the Project</h2>
+    <p>
+      You can explore the full source code and play the game through my GitHub repository:
+    </p>
+    <a href="https://github.com/CedNadj/yatzy.git" target="blank" class="button">View on GitHub</a>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Your Name. Built with HTML, CSS & JavaScript.</p>
+  </footer>
+
+</body>
+</html>
