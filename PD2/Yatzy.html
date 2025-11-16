@@ -10,22 +10,18 @@
 
   <!-- Header / Navigation -->
   <header>
-    <div class="container nav-container">
-      <h1 class="logo">My Portfolio</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="yatzy.html" class="active">Yatzy Game</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="navbar"></nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- Hero Banner -->
-  <section class="hero small-hero">
+  <section class="hero">
     <div class="hero-content">
       <h2>Yatzy Game Project</h2>
       <p>Interactive Dice Game built with HTML, CSS, and JavaScript</p>
@@ -42,7 +38,7 @@
       The goal was to combine logic programming, UI feedback, and responsive design into a cohesive experience.
     </p>
 
-    <img src="" alt="Screenshot of Yatzy Game Interface" class="project-image">
+    <img src="images/Screenshot 2025-11-05 133818.png" alt="Screenshot of Yatzy Game Interface" class="project-image">
 
     <h2>Technical Documentation</h2>
     <ul>
@@ -62,7 +58,6 @@
 
     <div class="code-snippet">
       <pre><code>
-// Example JavaScript: Random Dice Roll
 const rollDice = () => Math.floor(Math.random() * 6) + 1;
 
 document.querySelector("#roll").addEventListener("click", () => {
@@ -76,7 +71,6 @@ document.querySelector("#roll").addEventListener("click", () => {
     <ul>
       <li>Responsive web design principles (flexbox, grid, and media queries)</li>
       <li>Separation of concerns (HTML for structure, CSS for styling, JS for interactivity)</li>
-      <li>Use of semantic elements for accessibility and SEO</li>
       <li>Integration of Git/GitHub for version control</li>
       <li>Adherence to HTML & CSS best practices (validated and commented code)</li>
     </ul>
@@ -85,7 +79,7 @@ document.querySelector("#roll").addEventListener("click", () => {
     <p>
       You can explore the full source code and play the game through my GitHub repository:
     </p>
-    <a href="https://github.com/CedNadj/yatzy.git" target="blank" class="button">View on GitHub</a>
+    <a href="https://github.com/CedNadj/yatzy.git" class="button">View on GitHub</a>
 
   </main>
 
