@@ -90,30 +90,9 @@ VALUES
     <h2>Key Features & Implementation</h2>
     <h3>1. Asynchronous Operations</h3>
     <p>
-      Implemented JavaScript's async/await pattern with Fetch API for seamless patient data submissions 
+      Implemented JavaScript's async/await pattern with API for seamless patient data submissions 
       and real-time updates without page reloads, maintaining optimal user experience.
     </p>
-
-    <div class="code-snippet">
-      <pre><code>// Example: Async function to submit patient data
-async function submitPatientData(patientData) {
-    try {
-        const response = await fetch('/api/patients', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(patientData)
-        });
-        
-        if (!response.ok) throw new Error('Network response error');
-        const result = await response.json();
-        return result;
-    } catch (error) {
-        console.error('Error submitting patient data:', error);
-        throw error;
-    }
-}</code></pre>
     </div>
 
     <h3>2. Complex Data Handling</h3>
