@@ -64,9 +64,8 @@
     </p>
     <ul>
       <li><strong>Patients Table:</strong> Stores patient demographics and contact information</li>
-      <li><strong>Triage_Records Table:</strong> Manages triage assessments with timestamps</li>
-      <li><strong>Priority_Levels Table:</strong> Reference table for triage categories (1-5 scale)</li>
-      <li><strong>Medical_Staff Table:</strong> Hospital personnel credentials and roles</li>
+      <li><strong>Action_Logs</strong> Tracks the decision made from them admin to a patient</li>
+      <li><strong>Priority Table:</strong> Reference table for triage categories (1-10 scale)</li>
     </ul>
 
     <div class="code-snippet">
@@ -125,8 +124,7 @@ async function submitPatientData(patientData) {
 
     <h3>3. Server-Client Interaction</h3>
     <p>
-      Utilized Express.js to construct RESTful APIs with proper HTTP methods (GET, POST, PUT, DELETE) 
-      ensuring efficient and secure data transfer between frontend and backend services.
+      Utilized Node.js to construct RESTful APIs ensuring efficient and secure data transfer between frontend and backend services.
     </p>
 
     <h3>4. Testing Strategy</h3>
