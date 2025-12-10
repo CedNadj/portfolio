@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Triage App | My Portfolio</title>
+  <link rel="stylesheet" href="styleYatzy.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">My Portfolio</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Hospital Triage App</h2>
+      <p>Full-stack web application for emergency room patient prioritization and management</p>
+      <p>
+        ...
+      </p>
+      <a href="https://github.com/M-Lucas12/emergency_waitlist.git" class="btn">View GitHub Repository</a>
+    </div>
+  </section>
+
+  <!-- Main Project Section -->
+  <main class="container project-detail">
+
+    <h2>Project Overview</h2>
+    <p>
+      The <strong>Hospital Triage App</strong> was developed as Assignment #3 in my web development course.
+      This full-stack application simulates an emergency room triage system, allowing medical staff to 
+      register patients, assign priority levels based on severity, and manage waiting lists in real-time.
+      The system ensures critical patients receive immediate attention while efficiently managing hospital resources.
+    </p>
+
+    <h2>Technical Documentation</h2>
+    <h3>Core Technologies Used</h3>
+    <ul>
+      <li><strong>Backend:</strong> Node.js with Express.js framework</li>
+      <li><strong>Database:</strong> PostgreSQL with sophisticated relational schema</li>
+      <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript (ES6+)</li>
+      <li><strong>API Design:</strong> RESTful architecture with JSON data exchange</li>
+      <li><strong>Testing:</strong> Postman for API endpoint validation</li>
+      <li><strong>Version Control:</strong> Git/GitHub with structured commit history</li>
+    </ul>
+
+    <h3>Database Schema & Design</h3>
+    <p>
+      The application uses a normalized relational database structure with proper table relationships:
+    </p>
+    <ul>
+      <li><strong>Patients Table:</strong> Stores patient demographics and contact information</li>
+      <li><strong>Triage_Records Table:</strong> Manages triage assessments with timestamps</li>
+      <li><strong>Priority_Levels Table:</strong> Reference table for triage categories (1-5 scale)</li>
+      <li><strong>Medical_Staff Table:</strong> Hospital personnel credentials and roles</li>
+    </ul>
+
+    <div class="code-snippet">
+      <pre><code>-- Patients Table
+CREATE TABLE patients (
+    patient_id SERIAL PRIMARY KEY,
+    code VARCHAR(50) NOT NULL,
+    name VARCHAR(50) NOT NULL,
+    injury_type varchar(50) NOT NULL,
+    pain_level int,
+    arrival_time timestamp(),
+    priority_id int(),
+);
+
+-- DML for inserting Action_Logs
+INSERT INTO Action_Logs 
+(patient_id, code, name, injury_type, pain_level, arrival_time, priority_id) 
+VALUES 
+(1, 3, John Swmith, 'Chest pain', 7, 4h30, medium, 5);</code></pre>
+    </div>
+
+    <h2>Key Features & Implementation</h2>
+    <h3>1. Asynchronous Operations</h3>
+    <p>
+      Implemented JavaScript's async/await pattern with Fetch API for seamless patient data submissions 
+      and real-time updates without page reloads, maintaining optimal user experience.
+    </p>
+
+    <div class="code-snippet">
+      <pre><code>// Example: Async function to submit patient data
+async function submitPatientData(patientData) {
+    try {
+        const response = await fetch('/api/patients', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(patientData)
+        });
+        
+        if (!response.ok) throw new Error('Network response error');
+        const result = await response.json();
+        return result;
+    } catch (error) {
+        console.error('Error submitting patient data:', error);
+        throw error;
+    }
+}</code></pre>
+    </div>
+
+    <h3>2. Complex Data Handling</h3>
+    <p>
+      Developed robust backend using Node.js with PostgreSQL, implementing complex queries with proper 
+      JOIN operations and transaction management to ensure data integrity across related tables.
+    </p>
+
+    <h3>3. Server-Client Interaction</h3>
+    <p>
+      Utilized Express.js to construct RESTful APIs with proper HTTP methods (GET, POST, PUT, DELETE) 
+      ensuring efficient and secure data transfer between frontend and backend services.
+    </p>
+
+    <h3>4. Testing Strategy</h3>
+    <p>
+      Implemented comprehensive testing using Postman for API validation, ensuring all endpoints 
+      respond correctly with appropriate status codes and data formats.
+    </p>
+
+    <h2>Additional Technologies & Best Practices Learned</h2>
+    <h3>Database Concepts Applied</h3>
+    <ul>
+      <li><strong>ACID Compliance:</strong> Ensured database transactions maintain Atomicity, Consistency, Isolation, and Durability</li>
+      <li><strong>Transaction Management:</strong> Implemented proper commit/rollback mechanisms for data integrity</li>
+      <li><strong>Data Normalization:</strong> Applied 3rd normal form to eliminate redundancy</li>
+      <li><strong>Indexing Strategy:</strong> Created indexes on frequently queried columns for performance optimization</li>
+    </ul>
+
+    <h3>Advanced Web Development Techniques</h3>
+    <ul>
+      <li><strong>AJAX Implementation:</strong> Used for partial page updates and real-time data fetching</li>
+      <li><strong>Error Handling:</strong> Comprehensive try-catch blocks and error middleware in Express</li>
+      <li><strong>Security Practices:</strong> Input validation, SQL injection prevention, and CORS configuration</li>
+      <li><strong>Code Organization:</strong> Separation of concerns with MVC-inspired architecture</li>
+    </ul>
+
+    <h3>Development Workflow</h3>
+    <ul>
+      <li><strong>Git Branching Strategy:</strong> Feature-based branching with pull requests</li>
+      <li><strong>Code Documentation:</strong> JSDoc comments and README files for maintainability</li>
+      <li><strong>Project Planning:</strong> User stories, wireframes, and database schema design before implementation</li>
+    </ul>
+
+    <h2>Challenges & Solutions</h2>
+    <h3>Challenge 1: Real-time Priority Updates</h3>
+    <p>
+      <strong>Problem:</strong> Ensuring the waiting list automatically reorders when new high-priority patients arrive.<br>
+      <strong>Solution:</strong> Implemented database triggers and frontend polling mechanism to refresh the queue every 30 seconds.
+    </p>
+
+    <h3>Challenge 2: Data Validation Across Layers</h3>
+    <p>
+      <strong>Problem:</strong> Maintaining consistent validation rules on client and server sides.<br>
+      <strong>Solution:</strong> Created shared validation utility functions and implemented comprehensive server-side validation.
+    </p>
+
+    <h3>Challenge 3: Concurrent Access Management</h3>
+    <p>
+      <strong>Problem:</strong> Multiple staff members accessing and modifying the same patient records.<br>
+      <strong>Solution:</strong> Implemented optimistic locking and transaction isolation levels in PostgreSQL.
+    </p>
+
+    <h2>Project Links & Repository</h2>
+    <p>
+      Explore the complete implementation, including database schema, API documentation, and source code:
+    </p>
+    <a href="https://github.com/M-Lucas12/emergency_waitlist.git" class="button">View Full Project on GitHub</a>
+    <br><br>
+
+    <h2>Learning Outcomes</h2>
+    <p>
+      This project provided hands-on experience with full-stack development, database design, and API construction. 
+      Key takeaways include understanding the complete web application lifecycle, from requirements gathering and 
+      database design to implementation, testing, and deployment. The experience with PostgreSQL in particular 
+      deepened my understanding of relational database management systems and their application in real-world scenarios.
+    </p>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 My Portfolio. Project Deliverable #3 - Hospital Triage App Documentation.</p>
+    <p style="font-size: 0.8rem; margin-top: 5px;">Course: Introduction to Internet and Web Development</p>
+  </footer>
+
+</body>
+</html>

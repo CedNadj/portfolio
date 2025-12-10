@@ -1,0 +1,213 @@
+/* === YATZY PROJECT PAGE STYLES === */
+
+/* ===== GLOBAL STYLES ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background-color: #00b6c4;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #003f46;
+  text-decoration: underline;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  background: linear-gradient(135deg, #00b6c4, #008a99);
+  color: white;
+  text-align: center;
+  padding: 100px 20px 80px 20px;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero h2 span {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.btn {
+  background-color: #fff;
+  color: #00b6c4;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-2px);
+}
+
+/* Main Documentation Section */
+.project-detail {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.project-detail h2 {
+  font-size: 1.6rem;
+  color: #00b6c4;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  border-left: 6px solid #00b6c4;
+  padding-left: 10px;
+}
+
+.project-detail p {
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.project-detail ul {
+  margin-left: 25px;
+  margin-bottom: 20px;
+  list-style-type: square;
+  color: #333;
+}
+
+.project-detail ul li {
+  line-height: 1.8;
+}
+
+/* Project Screenshot */
+.project-image {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 12px;
+  display: block;
+  margin: 30px auto;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+  transform: scale(1.03);
+}
+
+/* Code Snippet Styling */
+.code-snippet {
+  background: #1e1e1e;
+  color: #e0e0e0;
+  border-radius: 10px;
+  padding: 15px 20px;
+  overflow-x: auto;
+  margin: 20px 0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+}
+
+.code-snippet pre {
+  margin: 0;
+}
+
+.code-snippet code {
+  color: #9cdcfe;
+}
+
+/* GitHub Button */
+.button {
+  display: inline-block;
+  background: #00b6c4;
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.button:hover {
+  background: #0099a8;
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  background-color: #00b6c4;
+  color: white;
+  padding: 18px;
+  font-size: 0.95rem;
+  margin-top: 60px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* === RESPONSIVE ADJUSTMENTS === */
+@media (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .project-detail {
+    margin: 40px auto;
+  }
+
+  .project-detail h2 {
+    font-size: 1.3rem;
+  }
+
+  .code-snippet {
+    font-size: 0.85rem;
+  }
+}
